@@ -2,38 +2,42 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Sep 14 13:11:41 2021
-# Process ID: 12304
-# Current directory: H:/TEMP/INF3610/2020847_2028284/LAB1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12352 H:\TEMP\INF3610\2020847_2028284\LAB1\LAB1.xpr
-# Log file: H:/TEMP/INF3610/2020847_2028284/LAB1/vivado.log
-# Journal file: H:/TEMP/INF3610/2020847_2028284/LAB1\vivado.jou
+# Start of session at: Thu Sep 16 10:51:19 2021
+# Process ID: 10416
+# Current directory: C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11220 C:\TEMP\INF3610-TP\TP1\TEMP\INF3610\2020847_2028284\LAB1\LAB1.xpr
+# Log file: C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/vivado.log
+# Journal file: C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1\vivado.jou
 #-----------------------------------------------------------
-start_guioopen_project H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.xpr
+start_gui
+open_project C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.xpr
 INFO: [Project 1-313] Project file moved from 'C:/TEMP/INF3610/2020847_2028284/LAB1' since last save.
 Scanning sources...
 Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.ip_user_files', nor could it be found using path 'C:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.ip_user_files'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Logiciels/Xilinx/Vivado/2018.3/data/ip'.open_project: Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 896.699 ; gain = 320.500
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Logiciels/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:12 . Memory (MB): peak = 773.348 ; gain = 204.930
 update_compile_order -fileset sources_1
-launch_sdk -worexit
-INFO: [Common 17-206] Exiting Vivado at Tue Sep 14 13:14:13 2021...
-610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-4158] Exported Hardware file is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-export the design and launch SDK otherwise SDK is launched with out of date hardware system file.
+launch_sdk -workspace C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk -hwspec C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
 INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk -hwspec H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
+INFO: [Vivado 12-417] Running xsdk -workspace C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk -hwspec C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
 INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
-launch_sdk -workspace H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk -hwspec H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
-INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk -hwspec H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
-INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
-launch_sdk -workspace H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk -hwspec H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
-INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk -hwspec H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
-INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
-launch_sdk -workspace H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk -hwspec H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
-INFO: [Vivado 12-393] Launching SDK...
-INFO: [Vivado 12-417] Running xsdk -workspace H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk -hwspec H:/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
-INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
-exit
-INFO: [Common 17-206] Exiting Vivado at Tue Sep 14 14:40:03 2021...
+open_bd_design {C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.srcs/sources_1/bd/design_1/design_1.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:fit_timer:2.0 - fit_timer_0
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:axi_intc:4.1 - axi_intc_0
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+WARNING: [BD 41-1731] Type mismatch between connected pins: /axi_intc_0/irq(undef) and /processing_system7_0/Core0_nIRQ(intr)
+Successfully read diagram <design_1> from BD file <C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.srcs/sources_1/bd/design_1/design_1.bd>
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1071.770 ; gain = 0.000
+INFO: [Vivado 12-4159] Implementation run is out of date. Exported hardware information may be inconsistent with respect to the current state of the design. It is recommended that you re-run implementation and re-generate bitstream before doing hardware export.
+file copy -force C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.runs/impl_1/design_1_wrapper.sysdef C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf
+

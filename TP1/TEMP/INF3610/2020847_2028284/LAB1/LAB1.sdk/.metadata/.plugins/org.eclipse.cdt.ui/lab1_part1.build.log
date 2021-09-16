@@ -1,8 +1,73 @@
-13:57:52 **** Incremental Build of configuration Debug for project lab1_part1 ****
+12:22:05 **** Auto Build of configuration Debug for project lab1_part1 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
-make: Nothing to be done for 'main-build'.
+'Building file: ../src/routeur.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/routeur.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../ucos_bsp_0/ps7_cortexa9_0/include -MMD -MP -MF"src/routeur.d" -MT"src/routeur.o" -o "src/routeur.o" "../src/routeur.c"
+../src/routeur.c:48:1: warning: multi-line comment [-Wcomment]
+ // #define safeprintf(fmt, ...)               \
+ ^
+../src/routeur.c: In function 'create_tasks':
+../src/routeur.c:99:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/routeur.c: In function 'create_events':
+../src/routeur.c:110:6: warning: unused variable 'i' [-Wunused-variable]
+  int i;
+      ^
+../src/routeur.c: In function 'TaskGenerate':
+../src/routeur.c:155:14: warning: unused variable 'perr' [-Wunused-variable]
+  OS_ERR err, perr;
+              ^~~~
+../src/routeur.c: In function 'TaskComputing':
+../src/routeur.c:231:14: warning: unused variable 'perr' [-Wunused-variable]
+  OS_ERR err, perr;
+              ^~~~
+../src/routeur.c: In function 'TaskForwarding':
+../src/routeur.c:316:14: warning: unused variable 'perr' [-Wunused-variable]
+  OS_ERR err, perr;
+              ^~~~
+../src/routeur.c: In function 'dispatch_packet':
+../src/routeur.c:360:14: warning: unused variable 'msg_size' [-Wunused-variable]
+  OS_MSG_SIZE msg_size;
+              ^~~~~~~~
+../src/routeur.c:358:14: warning: unused variable 'perr' [-Wunused-variable]
+  OS_ERR err, perr;
+              ^~~~
+../src/routeur.c: In function 'TaskOutputPort':
+../src/routeur.c:419:12: warning: unused variable 'info' [-Wunused-variable]
+  Info_Port info = *(Info_Port*)data;
+            ^~~~
+../src/routeur.c:415:14: warning: unused variable 'perr' [-Wunused-variable]
+  OS_ERR err, perr;
+              ^~~~
+../src/routeur.c: In function 'TaskStats':
+../src/routeur.c:455:10: warning: unused variable 'actualticks' [-Wunused-variable]
+  OS_TICK actualticks;
+          ^~~~~~~~~~~
+../src/routeur.c:454:10: warning: unused variable 'packet' [-Wunused-variable]
+  Packet *packet = NULL;
+          ^~~~~~
+../src/routeur.c:453:14: warning: unused variable 'msg_size' [-Wunused-variable]
+  OS_MSG_SIZE msg_size;
+              ^~~~~~~~
+../src/routeur.c:451:14: warning: unused variable 'perr' [-Wunused-variable]
+  OS_ERR err, perr;
+              ^~~~
+'Finished building: ../src/routeur.c'
+' '
+'Building target: lab1_part1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../ucos_bsp_0/ps7_cortexa9_0/lib -o "lab1_part1.elf"  ./src/routeur.o   -Wl,--start-group,-lucos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: lab1_part1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size lab1_part1.elf  |tee "lab1_part1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  76920	   2152	 377984	 457056	  6f960	lab1_part1.elf
+'Finished building: lab1_part1.elf.size'
+' '
 
-13:57:53 Build Finished (took 285ms)
+12:22:06 Build Finished (took 1s.6ms)
 

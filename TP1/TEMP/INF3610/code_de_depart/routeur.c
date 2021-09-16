@@ -254,7 +254,6 @@ void TaskComputing(void *pdata) {
 			(packet->src > REJECT_LOW3 && packet->src < REJECT_HIGH3) ||
 			(packet->src > REJECT_LOW4 && packet->src < REJECT_HIGH4)) {
 				OSMutexPend(&mutRejete, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
-				++nbPacketSourceRejete;
 
 //				OSMutexPend(&mutPrint, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
 //				xil_printf("\n--TaskComputing: Source invalide (Paquet rejete) (total : %d)\n", nbPacketSourceRejete);
@@ -264,9 +263,10 @@ void TaskComputing(void *pdata) {
 //				xil_printf("	** dst : %x \n", packet->dst);
 //				OSMutexPost(&mutPrint, OS_OPT_POST_NONE, &err);
 
-				OSMutexPost(&mutRejete, OS_OPT_POST_NONE, &err);
-
 				OSTaskQPost(&TaskStatsTCB, packet, sizeof(packet), OS_OPT_POST_FIFO, &err);
+				++nbPacketSourceRejete;
+
+				OSMutexPost(&mutRejete, OS_OPT_POST_NONE, &err);
 
 				OSMutexPend(&mutAlloc, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
 				free(packet);
@@ -480,13 +480,14 @@ void TaskOutputPort(void *data) {
 		nbPacketSourceRejeteTotal += nbPacketSourceRejete;
 		xil_printf("\n--TaskStats: Nombres de paquets rejetes totals : %d\n", nbPacketSourceRejeteTotal);
 
-		while(TaskStatsTCB.MsgQ.NbrEntries > 0) {
-			packet = OSTaskQPend(0, OS_OPT_PEND_BLOCKING, &msg_size, &ts, &err);
-			xil_printf("\n--Il s agit du paquet\n");
-			xil_printf("	** id : %d \n", packet->data[0]);
-			xil_printf("	** src : %x \n", packet->src);
-			xil_printf("	** dst : %x \n", packet->dst);
-		}
+		//while(TaskStatsTCB.MsgQ.NbrEntries > 0) {
+		//	xil_printf("Nbr of entries: %d \n", TaskStatsTCB.MsgQ.NbrEntries);
+		//	packet = OSTaskQPend(0, OS_OPT_PEND_BLOCKING, &msg_size, &ts, &err);
+		//	xil_printf("\n--Il s agit du paquet\n");
+		//	xil_printf("	** id : %d \n", packet->data[0]);
+		//	xil_printf("	** src : %x \n", packet->src);
+		//	xil_printf("	** dst : %x \n", packet->dst);
+		//}
 
 		OSMutexPend(&mutRejete, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
 		nbPacketSourceRejete = 0;

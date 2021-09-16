@@ -1215,3 +1215,14 @@ configparams force-mem-access 0
 13:58:03 INFO  : Memory regions updated for context APU
 13:58:04 INFO  : Launch script is exported to file 'H:\TEMP\INF3610\2020847_2028284\LAB1\LAB1.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_lab1_part1.elf_on_local.tcl'
 14:39:53 INFO  : Disconnected from the channel tcfchan#8.
+10:52:23 INFO  : Registering command handlers for SDK TCF services
+10:52:23 INFO  : Launching XSCT server: xsct.bat -interactive C:\TEMP\INF3610-TP\TP1\TEMP\INF3610\2020847_2028284\LAB1\LAB1.sdk\temp_xsdb_launch_script.tcl
+10:52:26 INFO  : XSCT server has started successfully.
+10:52:29 INFO  : Successfully done setting XSCT server connection channel  
+10:52:29 INFO  : Successfully done setting SDK workspace  
+10:52:29 INFO  : Restoring local repository preferences: 
+		 C:\TEMP\INF3610\ucos_v1_44\ucos
+		 C:\TEMP\INF3610\ucos_v1_44
+10:52:29 WARN  : Invalid repository path C:\TEMP\INF3610\ucos_v1_44.
+10:52:29 WARN  : Invalid repository path C:\TEMP\INF3610\ucos_v1_44\ucos.
+10:52:29 INFO  : Processing command line option -hwspec C:/TEMP/INF3610-TP/TP1/TEMP/INF3610/2020847_2028284/LAB1/LAB1.sdk/design_1_wrapper.hdf.
