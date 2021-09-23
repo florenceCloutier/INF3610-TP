@@ -28,7 +28,7 @@
 #define          TaskForwardingPRIO 			22
 #define          TaskOutputPortPRIO     		20
 
-#define			 WAITFORComputing 				1
+#define			 WAITFORComputing 				3
 
 
 // Routing info.

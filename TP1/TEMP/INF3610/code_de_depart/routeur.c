@@ -267,10 +267,6 @@ void TaskComputing(void *pdata) {
 				++nbPacketSourceRejete;
 
 				OSMutexPost(&mutRejete, OS_OPT_POST_NONE, &err);
-
-				OSMutexPend(&mutAlloc, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
-				free(packet);
-				OSMutexPost(&mutAlloc, OS_OPT_POST_NONE, &err);
 		} else {
 
 			//Dispatche les paquets selon leur type
@@ -480,19 +476,22 @@ void TaskOutputPort(void *data) {
 		nbPacketSourceRejeteTotal += nbPacketSourceRejete;
 		xil_printf("\n--TaskStats: Nombres de paquets rejetes totals : %d\n", nbPacketSourceRejeteTotal);
 
-		//while(TaskStatsTCB.MsgQ.NbrEntries > 0) {
-		//	xil_printf("Nbr of entries: %d \n", TaskStatsTCB.MsgQ.NbrEntries);
-		//	packet = OSTaskQPend(0, OS_OPT_PEND_BLOCKING, &msg_size, &ts, &err);
-		//	xil_printf("\n--Il s agit du paquet\n");
-		//	xil_printf("	** id : %d \n", packet->data[0]);
-		//	xil_printf("	** src : %x \n", packet->src);
-		//	xil_printf("	** dst : %x \n", packet->dst);
-		//}
+		while(TaskStatsTCB.MsgQ.NbrEntries > 0) {
+			packet = OSTaskQPend(0, OS_OPT_PEND_BLOCKING, &msg_size, &ts, &err);
+			xil_printf("\n--Il s agit du paquet\n");
+			xil_printf("	** id : %d \n", packet->data[0]);
+			xil_printf("	** src : %x \n", packet->src);
+			xil_printf("	** dst : %x \n", packet->dst);
+			OSMutexPend(&mutAlloc, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
+			free(packet);
+			OSMutexPost(&mutAlloc, OS_OPT_POST_NONE, &err);
+		}
+
+		OSMutexPost(&mutPrint, OS_OPT_POST_NONE, &err);
 
 		OSMutexPend(&mutRejete, 0, OS_OPT_PEND_BLOCKING, &ts, &err);
 		nbPacketSourceRejete = 0;
 		OSMutexPost(&mutRejete, OS_OPT_POST_NONE, &err);
-		OSMutexPost(&mutPrint, OS_OPT_POST_NONE, &err);
 
 		OSTimeDlyHMSM(0, 0, 30, 0, OS_OPT_TIME_HMSM_STRICT, &err);
 	}
